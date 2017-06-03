@@ -1,9 +1,10 @@
 #include <SFML/Graphics.hpp>
 using namespace sf;
-
+#include "Egg.h"
 int main()
 {
   RenderWindow window(VideoMode(800, 600), "Spam and Eggs");
+  Egg egg;
 
   while (window.isOpen())
     {
@@ -16,6 +17,7 @@ int main()
 	}
 
       window.clear();
+      egg.drawTo(window);
       window.display();
     }
   
